@@ -36,7 +36,7 @@
 
 
     <!-- Page title -->
-    <title>Aaron Gathrid - Bất Động Sản</title>
+    <title>Nguyễn Hải Anh</title>
 
     <!-- External styles and fonts -->
     <link
@@ -231,7 +231,6 @@
     </div>
 
 
-
     <!-- INTEL SECTION: Market Intelligence -->
     <div id="intel_container" class="container">
   <div onclick="closeintel()"><i class="fas fa-angle-right"></i></div>
@@ -355,32 +354,53 @@
     <!-- CONTACT SECTION: contact form -->
     <div id="contact_container" class="container">
       <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
-      <h1>liên hệ.</h1>
-      <section>
-        <h2>liên hệ với tôi</h2>
-        <form
-          id="contactForm"
-          action="https://formsubmit.co/17a7be11c84410fe2cce00450f2a9273"
-          method="POST"
-        >
-          <!-- Redirect after submission -->
-          <input type="hidden" name="_next" value="https://aaron-realestate.github.io/personal-website/" />
 
-          <input type="text" name="name" placeholder="tên" required />
-          <input type="email" name="email" placeholder="email" required /><br />
-          <input type="tel" name="phone" placeholder="số điện thoại" /><br />
-          <textarea
-            name="message"
-            placeholder="tin nhắn của bạn"
-            rows="5"
-          ></textarea><br />
+        <h1>liên hệ.</h1>
 
-          <button class="btn_two" type="submit">
-            gửi
-          </button>
-        </form>
-      </section>
-    </div>
+        <section>
+          <h2>liên hệ với tôi</h2>
+
+          <!-- FORM -->
+          <form
+            id="contactForm"
+            action="https://formsubmit.co/e7b7722048816bd28453ed45c9203ac2"
+            method="POST"
+            target="hidden_iframe"
+            onsubmit="handleSubmit()"
+          >
+            <!-- Không redirect -->
+            <input type="hidden" name="_captcha" value="false" />
+
+            <input type="text" name="name" placeholder="tên" required />
+            <input type="email" name="email" placeholder="email" required /><br />
+            <input type="tel" name="phone" placeholder="số điện thoại" /><br />
+            <textarea name="message" placeholder="tin nhắn của bạn" rows="5"></textarea><br />
+
+            <button class="btn_two" type="submit">gửi</button>
+          </form>
+
+          <!-- THÔNG BÁO THÀNH CÔNG -->
+          <div
+            id="successMessage"
+            style="display:none; margin-top:20px; color:#31fd37; font-size:18px;"
+          >
+            ✅ Gửi thành công! Cảm ơn bạn đã liên hệ.
+          </div>
+
+          <!-- iframe ẩn để submit form -->
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
+        </section>
+</div>
+
+<script>
+  function handleSubmit() {
+    setTimeout(() => {
+      document.getElementById("contactForm").style.display = "none";
+      document.getElementById("successMessage").style.display = "block";
+    }, 800); // đợi form submit xong
+  }
+</script>
+
 
     <!-- Footer with company name and linked logo -->
     <div id="footer">08/04</div>
