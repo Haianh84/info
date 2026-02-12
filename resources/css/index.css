@@ -1,0 +1,704 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/background.png") center center;
+
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Josefin Sans", sans-serif;
+}
+#loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: rgb(133, 134, 95);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#spinner {
+  animation: rotate 0.56s infinite linear;
+  width: 50px;
+  height: 50px;
+  border: 12px solid #fff;
+  border-bottom: 12px solid rgb(133, 134, 95);
+  border-radius: 50%;
+  margin: 0;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#box {
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  position: fixed;
+  top: 0;
+}
+#box div {
+  width: 16.66vw;
+  height: 100%;
+  display: inline-block;
+}
+.box1 {
+  background: rgb(133, 134, 95);
+}
+.box2 {
+  background: rgb(133, 134, 95);
+  margin-left: -5px;
+}
+/* Desktop giữ nguyên */
+#menu {
+  width: 100%;
+  text-align: center;
+  margin: 6vh 0;
+  display: none;
+}
+
+#menu a {
+  margin: 0 6%;
+  font-size: 19px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  #menu {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 16px;
+    justify-content: center;
+    line-height: 1.6;
+  }
+
+  #menu a {
+    margin: 0 24px;
+    text-align: center;
+  }
+}
+
+#middle {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  padding-bottom: 10vh;
+}
+#middle h1 {
+  color: rgb(133, 134, 95);
+  font-size: 70px;
+  text-decoration: underline;
+}
+#middle hname {
+  color: rgb(242, 231, 204);
+  font-size: 70px;
+  /* text-decoration: underline; */
+}
+#about {
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  font-size: 25px;
+  transform: rotate(-90deg);
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 50vh; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  transition: 0.4s ease-in-out;
+  border-radius: 0px 0px 100px 100px;
+}
+
+#work {
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  font-size: 25px;
+  transform: rotate(-90deg); /* Change to match #about direction */
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  left: 0; /* Move to left side */
+  bottom: 30vh; /* Offset vertically from #about */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  transition: 0.4s ease-in-out;
+  border-radius: 0px 0px 100px 100px;
+}
+
+#intel {
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  font-size: 25px;
+  transform: rotate(90deg); /* Change to match #about direction */
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  right: 0;
+  bottom: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  transition: 0.4s ease-in-out;
+  border-radius: 0px 0px 100px 100px;
+}
+
+#contact {
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  font-size: 25px;
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  transition: 0.4s ease-in-out;
+  border-radius: 100px 100px 0px 0px;
+}
+#about:hover {
+  background: rgba(133, 134, 95, 0.9);
+  cursor: pointer;
+}
+#work:hover {
+  background: rgba(133, 134, 95, 0.9);
+  cursor: pointer;
+}
+#intel:hover {
+  background: rgba(133, 134, 95, 0.9);
+  cursor: pointer;
+}
+#contact:hover {
+  background: rgba(133, 134, 95, 0.9);
+  cursor: pointer;
+}
+#middle table {
+  width: 30%;
+  margin: 6vh auto;
+}
+#middle table tr td {
+  text-align: center;
+}
+.social {
+  color: #fff;
+  font-size: 22px;
+  border-radius: 50%;
+  transition: 0.4s ease-in-out;
+  margin: 0px 8px;
+  text-align: center;
+}
+.social:hover {
+  cursor: pointer;
+  color: rgb(133, 134, 95);
+}
+.container {
+  width: 90vw;
+  height: 90vh;
+  padding: 5vh 5vw;
+  background: rgb(133, 134, 95);
+  color: #fff;
+  z-index: 9;
+  position: fixed;
+  max-height: 100vh;
+  overflow-y: auto;
+  display: none;
+}
+.container div {
+  font-size: 25px;
+  margin: 20px 0px;
+  transition: 0.4s ease-in-out;
+}
+.container div:hover {
+  cursor: pointer;
+}
+.container section {
+  margin: 8vh 0px;
+}
+#used div {
+  font-size: 14px !important;
+  display: inline-block;
+  padding: 8px 10px;
+  border: 2px solid #fff;
+  margin: 0px 10px;
+  border-radius: 50px;
+}
+#used:hover {
+  cursor: text;
+}
+#used div:hover {
+  cursor: text;
+}
+.container h1 {
+  font-size: 60px;
+  text-decoration: underline;
+}
+.container hname {
+  font-size: 60px;
+  /* text-decoration: underline; */
+}
+.container p {
+  font-size: 21px;
+}
+.btn_one {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  background: transparent;
+  border: 3px solid #fff;
+  padding: 8px 40px;
+  border-radius: 80px;
+  font-weight: bold;
+  margin: 2vh 10px;
+  transition: 0.4s ease-in-out;
+}
+.btn_one:hover {
+  cursor: pointer;
+  color: rgb(133, 134, 95);
+  background: #fff;
+}
+.btn_two {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(133, 134, 95);
+  background: #fff;
+  border: 3px solid #fff;
+  padding: 8px 40px;
+  border-radius: 80px;
+  font-weight: bold;
+  margin: 2vh 10px;
+  transition: 0.4s ease-in-out;
+}
+
+.btn_two:hover {
+  cursor: pointer;
+  padding: 8px 60px;
+}
+
+/* Button already updated with .btn_two and arrow styles from before */
+
+/* Optional: fade button arrow and expand on sending */
+/* (Make sure your previous .btn_two and .arrow styles are included) */
+
+.container form input {
+  width: 46%;
+  margin: 20px 1%;
+  background: transparent;
+  border: 0px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  transition: 0.4s ease-in-out;
+  color: #fff;
+  font-weight: bold;
+}
+.container form textarea {
+  width: 96%;
+  margin: 20px 1%;
+  padding: 8px 10px;
+  border: 0px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  background: transparent;
+  resize: none;
+  transition: 0.4s ease-in-out;
+  color: #fff;
+  font-weight: bold;
+}
+.container form input:focus {
+  outline: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+.container form textarea:focus {
+  outline: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+::placeholder {
+  color: #fff;
+}
+#footer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  letter-spacing: 5px;
+  color: rgba(214, 214, 214, 0.85);
+  z-index: 50;
+  pointer-events: none; /* tránh che click */
+}
+
+#particles-js {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(133, 134, 95);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(133, 134, 95, 0.8);
+}
+::selection {
+  color: #fff;
+  background: rgb(133, 134, 95);
+}
+
+@media (max-width: 800px) {
+  #about {
+    display: none;
+  }
+  #contact {
+    display: none;
+  }
+  #work {
+    display: none;
+  }
+  #intel {
+    display: none;
+  }
+  #footer {
+    text-align: center;
+  }
+  #middle {
+    width: 90vw;
+    padding: 0px 5vw;
+  }
+  #middle table {
+    width: 80%;
+  }
+  .container form input {
+    width: 90%;
+  }
+  .container form textarea {
+    width: 90%;
+  }
+ 
+  #onlywide {
+    display: none !important;
+  }
+  .box2 {
+    margin-left: 0px !important;
+  }
+  #box div {
+    width: 100%;
+  }
+}
+
+/**Main page - Oregon | Idaho - line**/
+.hometown {
+  color: #e1dfdf;
+  margin-top: 15px; /* Adjust as needed to tighten spacing */
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* --- About Section: Image + Text Layout --- */
+/* --- About Section Rebuilt Layout --- */
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 2vh;
+}
+
+.about-photo {
+  flex: 0 0 200px;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  color: #fff;
+}
+
+.about-text p {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+/* Full-width follow-up paragraph */
+.about-full {
+  margin-top: 30px;
+  color: #fff;
+}
+
+.about-full p {
+  font-size: 19px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Skills List --- */
+.skills-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.skills-tagline {
+  font-size: 16px;
+  font-style: italic;
+  color: #b3b38c;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 2vh 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Evenly space items */
+  gap: 20px 40px;
+}
+
+.skills-list li {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 12px;
+  flex: 1 1 22%; /* Ensures they sit 4 per row, responsive downstacking */
+  min-width: 200px;
+}
+
+.skills-list li .fas {
+  color: #b3b38c;
+  font-size: 20px;
+}
+
+/* Container text color for all work content */
+#work_container {
+  color: #fff; /* base text color white */
+  font-family: "Josefin Sans", sans-serif; /* to keep consistent font */
+}
+
+/* Testimonials text */
+#work_container #testimonials .testimonial p {
+  font-size: 16px; /* testimonial body text */
+  line-height: 1.5;
+  color: #fff; /* white text */
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #85785f; /* subtle left line */
+  padding-left: 1rem;
+}
+
+/* Names and addresses - slightly darker */
+#work_container #testimonials .testimonial strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: #b3b38c; /* lighter olive/dark beige for subtle contrast */
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+}
+
+/* Match btn_two style and hover elongation for btn_one */
+#work_container > section > a > button.btn_one {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(133, 134, 95);
+  background: #fff;
+  border: 3px solid #fff;
+  padding: 8px 40px;
+  border-radius: 80px;
+  font-weight: bold;
+  margin: 2vh 10px 2vh 0;
+  transition: padding 0.4s ease-in-out; /* smooth padding transition */
+}
+
+/* Match btn_two style and hover elongation for btn_one */
+#intel_container > section > a > button.btn_one {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(133, 134, 95);
+  background: #fff;
+  border: 3px solid #fff;
+  padding: 8px 40px;
+  border-radius: 80px;
+  font-weight: bold;
+  margin: 2vh 10px 2vh 0;
+  transition: padding 0.4s ease-in-out; /* smooth padding transition */
+}
+
+#work_container > section > a > button.btn_one:hover {
+  cursor: pointer;
+  padding: 8px 60px; /* elongates width on hover */
+  color: rgb(133, 134, 95); /* keep same text color */
+  background: #fff; /* keep same background */
+  border-color: #fff; /* keep same border */
+}
+
+#intel_container > section > a > button.btn_one:hover {
+  cursor: pointer;
+  padding: 8px 60px; /* elongates width on hover */
+  color: rgb(133, 134, 95); /* keep same text color */
+  background: #fff; /* keep same background */
+  border-color: #fff; /* keep same border */
+}
+
+#intel_toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.intel-section {
+  text-align: left;
+  padding: 20px;
+}
+
+#pdf-viewer-container {
+  /* Remove border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* subtle drop shadow instead */
+  background: #ffffff00;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+#pdf-render {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background: #f9f9f9;
+}
+
+#pdf-controls button {
+  padding: 6px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#pdf-controls span {
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+
+/* ===================== AVATAR HERO ===================== */
+.avatar-container {
+  margin: 0 auto 25px auto;
+  text-align: center;
+}
+
+.avatar-frame {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #85785f, #b3b38c);
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.4s ease;
+}
+
+.avatar-frame:hover {
+  transform: scale(1.08);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(242, 231, 204, 0.9);
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Responsive cho mobile */
+@media (max-width: 800px) {
+  .avatar-frame {
+    width: 140px;
+    height: 140px;
+    padding: 6px;
+  }
+  
+  #middle hname {
+    font-size: 50px;
+  }
+  
+  #middle h4.hometown {
+    font-size: 18px;
+  }
+  
+  #middle h2 {
+    font-size: 26px;
+  }
+}
+
+.social {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  text-decoration: none !important;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social i,
+.social img {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.social img {
+  filter: invert(1);
+}
+

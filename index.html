@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXEZBW9PZV"></script>
+    <!-- PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KXEZBW9PZV');
+    </script>
+    <!-- Character encoding and responsiveness setup -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="/resources/images/logo-haianh.ico" type="image/x-icon">
+    <meta
+      name="description"
+      content="Website cá nhân của Nguyễn Hải Anh – chia sẻ hành trình học tập, làm việc, kỹ năng và các dự án cá nhân. Không gian ghi lại trải nghiệm, tư duy và quá trình phát triển bản thân."
+    />
+    <!-- SEO cơ bản -->
+    <meta name="description" content="Website cá nhân của Hải Anh – nơi chia sẻ hành trình học tập, làm việc, kỹ năng và những ghi chú cá nhân.">
+
+    <!-- Open Graph (hiển thị khi share link) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hải Anh | Personal Website">
+    <meta property="og:description" content="Không gian cá nhân của Hải Anh – chia sẻ trải nghiệm, kỹ năng và góc nhìn cá nhân.">
+    <meta property="og:image" content="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/07/anh-co-4-la.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="LINK_WEBSITE_CUA_BAN">
+
+
+
+    <!-- Page title -->
+    <title>Nguyễn Hải Anh</title>
+
+    <!-- External styles and fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa:700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- External JavaScript library for animations and effects -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Your custom CSS file -->
+    <link rel="stylesheet" href="resources/css/index.css" />
+  </head>
+  <body>
+    <!-- Loading spinner screen -->
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+
+    <!-- Particle animation background -->
+    <div id="particles-js"></div>
+
+    <!-- Animation boxes shown on page load -->
+    <div id="box">
+      <div
+        class="box1 onlywide animated bounceOutLeft"
+        style="animation-delay: 1.7s"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutLeft"
+        style="animation-delay: 1.8s"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutLeft"
+        style="animation-delay: 1.9s"
+      ></div>
+      <div
+        class="box2 animated bounceOutRight"
+        style="animation-delay: 1.9s"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutRight"
+        style="animation-delay: 1.8s"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutRight"
+        style="animation-delay: 1.7s"
+      ></div>
+    </div>
+
+    <!-- Top navigation buttons -->
+    <a
+      id="about"
+      onclick="showabout()"
+      class="animated fadeIn"
+      style="animation-delay: 2.2s"
+      >giới thiệu</a
+    >
+    <a
+      id="intel"
+      onclick="showintel()"
+      class="animated fadeIn"
+      style="animation-delay: 2.2s"
+      >thông tin</a
+    >
+    <a
+      id="work"
+      onclick="showwork()"
+      class="animated fadeIn"
+      style="animation-delay: 2.2s"
+      >công việc</a
+    >
+    <a
+      id="contact"
+      onclick="showcontact()"
+      class="animated fadeIn"
+      style="animation-delay: 2.2s"
+      >liên hệ</a
+    >
+
+    <!-- Main introduction section -->
+    <div id="middle" class="animated slideInDown" style="animation-delay: 2s">
+      <hname>Nguyễn Hải Anh</hname>
+      <h4 class="hometown">Vinhomes Ocean Park 2 – Văn Giang, Hưng Yên</h4>
+      <h2>Kinh doanh & Marketing</h2>
+
+      <!-- Navigation menu inside the hero section -->
+      <div id="menu">
+        <a onclick="showabout()">giới thiệu</a>
+        <a onclick="showwork()">công việc</a>
+        <a onclick="showintel()">thông tin</a>
+        <a onclick="showcontact()">liên hệ</a>
+      </div>
+
+      <!-- Social media icons -->
+      <table>
+        <tr>
+
+          <td class="animated zoomIn" style="animation-delay:2.8s">
+            <a class="social" href="https://www.facebook.com/nguyenhaianh84" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </td>
+
+          <td class="animated zoomIn" style="animation-delay:2.2s">
+            <a class="social" href="https://www.tiktok.com/@haiaanh.ng" target="_blank">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </td>
+
+          <td class="animated zoomIn" style="animation-delay:2.8s">
+            <a class="social" href="https://zalo.me/0387772389" target="_blank">
+              <img src="https://simpleicons.org/icons/zalo.svg" alt="Zalo">
+            </a>
+          </td>
+
+          <td class="animated zoomIn" style="animation-delay:2.4s">
+            <a class="social" href="https://locket.cam/haianh84" target="_blank">
+              <i class="fas fa-heart"></i>
+            </a>
+          </td>
+        </tr>
+    </table>
+
+    </div>
+
+    <!-- WORKS SECTION: Testimonials & Transactions -->
+    <!-- WORKS SECTION: Career Journey -->
+    <div id="work_container" class="container">
+  <div onclick="closework()">
+    <i class="fas fa-angle-left"></i>
+  </div>
+
+  <h1>Công việc</h1>
+
+  <section id="career">
+    <h2>Hành trình</h2>
+
+    <div class="testimonial">
+      <p>
+        <strong>Kỹ thuật</strong><br>
+        Sửa chữa máy tính, kinh doanh camera ô tô.
+      </p>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        <strong>Học vấn</strong><br>
+        CNTT – ĐH Sư phạm Kỹ thuật Hưng Yên.
+      </p>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        <strong>Viettel Money</strong><br>
+        Software Development.
+      </p>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        <strong>Sao Vàng Holding</strong><br>
+        Marketing & Kinh doanh.
+      </p>
+    </div>
+
+    <div class="testimonial">
+      <p>
+        <strong>VN Homes</strong><br>
+        Marketing & Kinh doanh.
+      </p>
+    </div>
+
+    <div class="testimonial">
+      <p>Không ngừng học hỏi & hoàn thiện mỗi ngày.</p>
+    </div>
+  </section>
+</div>
+
+
+
+    <!-- INTEL SECTION: Market Intelligence -->
+    <div id="intel_container" class="container">
+  <div onclick="closeintel()"><i class="fas fa-angle-right"></i></div>
+  <h1>thông tin.</h1>
+
+  <!-- Toggle Buttons -->
+  <div id="intel_toggle">
+    <button id="headlines_btn" class="btn_two active">Tài liệu</button>
+    <button id="briefs_btn" class="btn_two">Ghi chú</button>
+  </div>
+
+  <!-- Documents Section -->
+  <div id="headlines_section" class="intel-section">
+    <p style="text-align:center; max-width:700px; margin:0 auto 25px; color:#ccc;">
+      Tổng hợp một số tài liệu và thông tin mình lưu lại trong quá trình tìm hiểu và làm việc.
+      Nội dung mang tính tham khảo và cập nhật theo thời gian.
+    </p>
+
+    <!-- PDF Selector -->
+    <div style="text-align: center; margin-bottom: 20px;">
+      <label for="pdf-selector"
+        style="color:#fff;font-family:'Josefin Sans',sans-serif;font-weight:bold;font-size:18px;margin-right:10px;">
+        Chọn tài liệu:
+      </label>
+      <select
+        id="pdf-selector"
+        style="font-size:16px;padding:6px 12px;border-radius:8px;border:none;font-family:'Josefin Sans';color:rgb(133,134,95);">
+      </select>
+    </div>
+
+    <div id="pdf-viewer-container" style="position: relative; max-width: 700px; margin: auto;">
+      <canvas id="pdf-render"></canvas>
+
+      <!-- Controls -->
+      <div
+        id="pdf-controls"
+        style="text-align:center;margin-top:15px;display:flex;justify-content:center;flex-wrap:wrap;gap:12px;align-items:center;"
+      >
+        <button id="pdf-prev" class="btn_one">← Trước</button>
+
+        <span
+          id="pdf-page-count"
+          style="font-family:'Josefin Sans',sans-serif;font-weight:bold;font-size:18px;color:#fff;"
+        >
+          Trang <span id="pdf-current-page">1</span> /
+          <span id="pdf-total-pages">--</span>
+        </span>
+
+        <button id="pdf-next" class="btn_one">Tiếp →</button>
+
+        <a
+          href="#"
+          target="_blank"
+          download
+          id="pdf-download"
+          class="btn_one"
+          style="margin-left:20px;"
+        >
+          Tải tài liệu
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes Section -->
+  <div id="briefs_section" class="intel-section" style="display:none;">
+    <p style="max-width:700px;margin:auto;color:#ccc;">
+      Một số ghi chú ngắn, suy nghĩ cá nhân và thông tin tổng hợp được rút ra trong quá trình tìm hiểu.
+      Nội dung sẽ được bổ sung và điều chỉnh theo thời gian.
+    </p>
+  </div>
+</div>
+
+
+    <!-- ABOUT SECTION: biographical and skills -->
+    <div id="about_container" class="container">
+      <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+      <h1>giới thiệu.</h1>
+
+      <section>
+        <div class="about-flex">
+          <!-- Left: Headshot -->
+          <div class="about-photo">
+            <img src="resources/images/haianh.png" alt="Ảnh Nguyễn Hải Anh" />
+          </div>
+
+          <!-- Right: Text next to photo -->
+          <div class="about-text">
+            <p>Think – Feel – Action – Result</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <h2 class="skills-title">
+          Kỹ năng <span class="skills-tagline"><em>do it</em></span>
+        </h2>
+        <ul class="skills-list">
+          <li><i class="fas fa-check-circle"></i>Phân tích và xử lý dữ liệu</li>
+          <li><i class="fas fa-check-circle"></i>Tự động hóa với AI</li>
+          <li><i class="fas fa-check-circle"></i>Marketing và xây dựng nội dung</li>
+          <li><i class="fas fa-check-circle"></i>Kinh doanh và tư vấn bất động sản</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- CONTACT SECTION: contact form -->
+    <div id="contact_container" class="container">
+      <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+
+        <h1>liên hệ.</h1>
+
+        <section>
+          <h2>liên hệ với tôi</h2>
+
+          <!-- FORM -->
+          <form
+            id="contactForm"
+            action="https://formsubmit.co/e7b7722048816bd28453ed45c9203ac2"
+            method="POST"
+            target="hidden_iframe"
+            onsubmit="handleSubmit()"
+          >
+            <!-- Không redirect -->
+            <input type="hidden" name="_captcha" value="false" />
+
+            <input type="text" name="name" placeholder="tên" required />
+            <input type="email" name="email" placeholder="email" required /><br />
+            <input type="tel" name="phone" placeholder="số điện thoại" /><br />
+            <textarea name="message" placeholder="tin nhắn của bạn" rows="5"></textarea><br />
+
+            <button class="btn_two" type="submit">gửi</button>
+          </form>
+
+          <!-- THÔNG BÁO THÀNH CÔNG -->
+          <div
+            id="successMessage"
+            style="display:none; margin-top:20px; color:#31fd37; font-size:18px;"
+          >
+            ✅ Gửi thành công! Cảm ơn bạn đã liên hệ.
+          </div>
+
+          <!-- iframe ẩn để submit form -->
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
+        </section>
+</div>
+
+<script>
+  function handleSubmit() {
+    setTimeout(() => {
+      document.getElementById("contactForm").style.display = "none";
+      document.getElementById("successMessage").style.display = "block";
+    }, 800); // đợi form submit xong
+  }
+</script>
+
+
+    <!-- Footer with company name and linked logo -->
+    <div id="footer">08/04</div>
+
+
+
+
+    <!-- Custom JavaScript files for interactivity and animations -->
+    <script src="scripts/index.js" type="text/javascript"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
