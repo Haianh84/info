@@ -20,6 +20,16 @@
       gtag('js', new Date());
       gtag('config', 'G-KXEZBW9PZV');
     </script>
+    <script>
+      (function () {
+          const url = new URL(window.location.href);
+      
+          if (url.searchParams.has('fbclid')) {
+              url.searchParams.delete('fbclid');
+              window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+          }
+      })();
+    </script>
 
     <meta
       name="description"
